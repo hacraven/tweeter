@@ -11,7 +11,7 @@ module TweetsHelper
 				else
 					tag = Tag.create(phrase: word.downcase)
 				end
-				tweet_tag = TweetTag.create(tweet_id: tweet.id, tag_id: tag_id)
+				tweet_tag = TweetTag.create(tweet_id: tweet.id, tag_id: tag.id)
 				message_arr[index] = "<a href='tag_tweets?id=#{tag.id}'>#{word}</a>"
 			end
 		end

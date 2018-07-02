@@ -2,7 +2,7 @@
 
 <p>
   <strong>Message:</strong>
-  <%= @tweet.message %>
+  <%= @tweet.message.html_safe %>
 </p>
 
 <!-- changed to username instead of user id that way
