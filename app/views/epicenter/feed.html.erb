@@ -3,19 +3,36 @@
 
 
 
-</div>
-
+<!-- sidebar begin-- -->
 <div class="row"> 
 	<div class="col-md-3">
-		<div class="panel panel-body">
+		<div class="panel panel-heading">
 			<% if current_user.avatar.blank? == false %>
 	            <%= image_tag current_user.avatar.url, size:100, class: "img-circle" %>
 	        <% end %> 
 	        <h4><%= link_to current_user.name, show_user_path(id: current_user.id) %></h4>
 	        <p class="text-muted">@<%= link_to current_user.username, show_user_path(id: current_user.id) %>
-		</div>
-	</div>  <!-- end sidebar -->
-	<div class="col-md-9">
+		</div> <!-- end panel heading -->
+
+
+		<div class="panel panel-body">
+			<h4>placeholder for trends for you</h4>
+			<p>need to add ruby instructions in order to get the trends like twitter has</p>
+			<p>maybe add the #blessed and others here? using a "< %  = "</p>
+			<p>#USA</p>
+			<p>#Soccer Team</p>
+			<p>#BEfit</p>
+			<p>#Summer</p>
+			<p>#Heatwave</p>
+			<p>#lebron</p>
+		</div>	<!-- end panel body -->
+	</div> <!-- end col  -->
+	<!-- end sidebar -->
+
+
+<!-- middle column which is the main one for the tweeter feed -->
+
+	<div class="col-md-6">
 		<div class="panel panel-body">
 			<%= render 'tweets/form', tweet: @tweet %>
 		</div>
@@ -38,4 +55,38 @@
 		<% end %>
 	</div>  <!-- end main feed -->
 
-</div>
+<!-- begin who to follow sidebar col -->
+
+	<div class="col-md-3">
+			<div class="panel panel-body">
+					<strong>Who to follow</strong><br>
+					<strong>This is place holder text for the info that is going here. Will need to add Ruby intructions
+					to get the exact information that is needed. Just want to show how the page should look when it is completed.</strong> 
+					<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					<br><strong>More Placeholder</strong>
+					<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+			</div> <!-- end panel body for who to follow sidebar -->
+
+			<!-- footer for about twitter -->
+			<div class="panel panel-footer">
+				 Placeholder for links for copywrite, About, help center, terms, etc
+				 <strong>however, this might be accomplished with a navbar footer that is
+				 responsive based on the type of screen</strong>
+			</div>	 
+
+
+				
+	</div>	<!-- end of 'who to follow sidebar col -->
+
+</div> <!-- end of row -->

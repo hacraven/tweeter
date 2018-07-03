@@ -1,26 +1,71 @@
-<h2>Log in</h2>
+<p>*****new.html.erb page trying to style like twitter***** </p>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-group">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
-  </div>
 
-  <div class="form-group">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
-  </div>
+<!-- left side of twitter page -->
+
+<div class="row">
+  
+  <div class="col-md-6">
+
+    <h4>How do you get these exactly where you want them on this side and
+    how do you get this side to be blue?</h4>
+    
+
+    <h3>Follow your interests. <span class="glyphicon glyphicon-search"></span></h3> 
+    <h3>Hear what people are talking about. <span class="glyphicon glyphicon-user"></span></h3>
+    <h3>Join the conversation. <span class="glyphicon glyphicon-comment"></span></h3>
+
+
+ 
+  </div>  <!-- end of col   -->
+
+
+
+
+
+<!-- right side of twitter page -->
+
+  <div class="col-md-6">
+
+
+    <h2>Log in</h2>
+    <h4>see comments on this--just trying to figure it out</h4>
+    <!--   email_field_tag 'email', 'email@example.com'---HC changed the value--and I know it
+      has to have routes/directions to be able to use any of those...also not sure if this is the type of button that twitter uses at top of page??????
+# => -->
+ <input id="email" name="email" type="email" value="phone, email, or username" />
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    <h2><strong>See What's Happening in the World Right Now</strong></h2>
+
+    <h4>Join Twitter Today</h4>
+    <div class="form-group">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+    </div>
 
   <% if devise_mapping.rememberable? -%>
     <div class="form-group">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <%= f.check_box :remember_me %>
+    <%= f.label :remember_me %>
     </div>
   <% end -%>
 
-  <div class="form-group">
+    <div class="form-group">
     <%= f.submit "Log in", class: "btn btn-success" %>
-  </div>
-<% end %>
+    </div>
+  <% end %>
 
-<%= render "devise/shared/links" %>
+
+
+  <%= render "devise/shared/links" %>
+
+  </div>
+</div>
