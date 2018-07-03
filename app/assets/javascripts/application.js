@@ -1,3 +1,5 @@
+
+
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -16,3 +18,16 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+
+$(document).on('turbolinks:load', function(){
+	$('#unfollow_btn').hover(function(){
+		$(this).removeClass('btn-primary');
+		$(this).addClass('btn-danger');
+		$(this).html("Unfollow");
+	}, function(){
+		$(this).html("Following");
+		$(this).removeClass('btn-danger');
+		$(this).addClass('btn-primary');
+	});
+});
